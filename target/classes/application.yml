@@ -1,0 +1,21 @@
+server:
+  port: 23030
+  servlet:
+    context-path: /cloud-consumer
+
+
+spring:
+  mvc.throw-exception-if-no-handler-found: true
+  resources.add-mappings: false
+  application:
+    name: cloud-consumer
+
+
+
+#eureka
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:20000/eureka/
